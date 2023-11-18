@@ -73,9 +73,9 @@ const App = () => {
                   return (
                     <div className="single-tour" >
                       <p className="tour-info" >{el.price}</p>
-                      <p className="tour-price" >{isVisibleStatuses[i] ? el.info : el.info.slice(0,200)}</p>
+                      <p id={`tour-item-para-${el.id}`} className="tour-price" >{isVisibleStatuses[i] ? el.info : el.info.slice(0,200)}</p>
                       <button onClick={()=>toggleVisibleStatus(i)} >{ !isVisibleStatuses[i]? "Show More": "Show Less"}</button>
-                      <button className="delete-btn" onClick={() => deleteData(i)} >Delete</button>
+                      <button className="delete-btn" id={`delete-btn-${el.id}`} onClick={() => deleteData(i)} >Delete</button>
                     </div>
                   )
                 })
